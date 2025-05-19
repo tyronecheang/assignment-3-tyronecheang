@@ -3,7 +3,7 @@ Self-graded Assignment 3 Checklist
     Criteria	
     ========
 /10 marks
-[]  Pokemon cards are randomized each game.
+[X]  Pokemon cards are randomized each game.
 
 /2 marks
 [X]  Cards flip when clicked.
