@@ -1,0 +1,37 @@
+<%- include("templates/header", { title: "Menu" }) %>
+
+    <button id="darkSwitch"
+        class="btn btn-outline-secondary position-absolute top-0 end-0 m-4 d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm"
+        type="button" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-stars fs-5"></i>
+        <span class="fw-semibold small">Dark mode</span>
+    </button>
+
+    <div class="container d-flex flex-column justify-content-center vh-100">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="display-1 fw-bold mb-3">Choose Difficulty</h1>
+
+                <form action="/game" method="get">
+                    <div class="btn-group" role="group" aria-label="Difficulty selection">
+                        <input type="radio" class="btn-check" name="mode" id="easy" value="Easy" autocomplete="off"
+                            required>
+                        <label class="btn btn-success btn-lg px-4" for="easy">Easy</label>
+
+                        <input type="radio" class="btn-check" name="mode" id="medium" value="Medium" autocomplete="off">
+                        <label class="btn btn-warning btn-lg px-4" for="medium">Medium</label>
+
+                        <input type="radio" class="btn-check" name="mode" id="hard" value="Hard" autocomplete="off">
+                        <label class="btn btn-danger btn-lg px-4" for="hard">Hard</label>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">Start</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include("templates/footer") %>

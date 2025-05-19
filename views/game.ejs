@@ -1,0 +1,34 @@
+<%- include("templates/header", { title: mode }) %>
+
+<p class="mb-3 fw-semibold">
+  Time left: <span id="timer" class="me-4">0</span>
+  Clicks: <span id="clicks" class="me-4">0</span>
+  Pairs Left: <span id="pairsLeft" class="me-4">0</span>
+  Pairs Matched: <span id="pairsMatched" class="me-4">0</span>
+  Total Pairs: <span id="totalPairs">0</span>
+</p>
+
+
+    <div id="powerUpIndicator" style="display:none; color: yellow; font-weight: bold; margin-top: 10px;">
+        ⚡ Power-Up Activated! Gain extra time for every match made! ⚡
+    </div>
+
+
+    <button id="darkSwitch"
+        class="btn btn-outline-secondary position-absolute top-0 end-0 m-4 d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm"
+        type="button" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-stars fs-5"></i>
+        <span class="fw-semibold small">Dark mode</span>
+    </button>
+
+    <div id="game_grid" class="<%= mode.toLowerCase() %>">
+        <% const tiles={ Easy: 6, Medium: 12, Hard: 18 }; const cards=tiles[mode]; %>
+            <% for (let i=0; i < cards; i++) { %>
+                <div class="card">
+                    <img id="img<%= i + 1 %>" class="front_face" src="/001.png" alt="">
+                    <img class="back_face" src="/back.webp" alt="">
+                </div>
+                <% } %>
+    </div>
+
+    <%- include("templates/footer") %>

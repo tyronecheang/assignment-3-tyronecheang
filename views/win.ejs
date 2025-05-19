@@ -1,0 +1,19 @@
+<%- include("templates/header", { title: "Win" }) %>
+
+    <button id="darkSwitch"
+        class="btn btn-outline-secondary position-absolute top-0 end-0 m-4 d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm"
+        type="button" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-stars fs-5"></i>
+        <span class="fw-semibold small">Dark mode</span>
+    </button>
+
+    <div class="vh-100 d-flex flex-column justify-content-center align-items-center bg-light text-center">
+        <h1 class="display-2 mb-3">🎉 You Win! 🎉</h1>
+
+        <div class="btn-group">
+            <a href="/game?mode=<%= mode %>" class="btn btn-primary">Play again</a>
+            <a href="/" class="btn btn-outline-secondary">Menu</a>
+        </div>
+    </div>
+
+    <%- include("templates/footer") %>
