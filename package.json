@@ -1,0 +1,26 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Pokemon Matching Game",
+  "homepage": "https://github.com/tyronecheang/assignment-3-tyronecheang#readme",
+  "bugs": {
+    "url": "https://github.com/tyronecheang/assignment-3-tyronecheang/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyronecheang/assignment-3-tyronecheang.git"
+  },
+  "license": "ISC",
+  "author": "Tyrone Cheang",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "path": "^0.12.7"
+  }
+}
